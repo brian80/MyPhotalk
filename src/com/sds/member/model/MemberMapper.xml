@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Member">
+
+    <!-- 중복가입체크 -->
+    <select id="loginCheck" parameterType="String" resultType="Member">
+		select * from member where email=#{email}        
+    </select>
+	
+    <!-- 신규가입 -->
+    <insert id="insert" parameterType="Member">
+        insert into member(email,pwd) values(#{email},#{pwd})
+    </insert>
+    
+</mapper>
+
+
+
+
+
+
+
+
+
