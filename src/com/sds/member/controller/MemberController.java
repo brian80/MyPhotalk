@@ -11,8 +11,10 @@ public class MemberController {
 	
 	@RequestMapping("/member/regist.do")
 	public ModelAndView insert(Member member){
+		System.out.println("email, pwd"+member.getEmail()+", "+member.getPwd());
 		ModelAndView mav = new ModelAndView();
-		mav.addObject("resultCode", "success");
+		mav.addObject("requestCode", "delete");
+		mav.addObject("resultData", "success");
 		mav.setViewName("member/registResult");		
 		return mav;
 	}
