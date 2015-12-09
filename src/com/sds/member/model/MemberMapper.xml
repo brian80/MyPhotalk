@@ -5,7 +5,7 @@
 <mapper namespace="Member">
 
     <!-- 중복가입체크 -->
-    <select id="loginCheck" parameterType="String" resultType="Member">
+    <select id="isMember" parameterType="String" resultType="Member">
 		select * from member where email=#{email}        
     </select>
 	
